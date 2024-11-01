@@ -1,0 +1,305 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ */
+.whisk-container {
+  max-width: inherit;
+
+  .wp-block-whisk-recipe {
+	background: #fff;
+	padding: 10px;
+  }
+
+  .whisk-header {
+	margin-bottom: 40px;
+	border-bottom: 1px solid #e2e2ea;
+  }
+  .whisk-image {
+	border-radius: 10px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 0 25px 0;
+  }
+  .whisk-h2 {
+	font-size: 22px !important;
+	color: #333 !important;
+	font-weight: normal;
+	margin: 0 0 25px 0 !important;
+  }
+  .whisk-h3 {
+	font-size: 18px !important;
+	color: #333 !important;
+	font-weight: normal;
+	margin: 0 0 20px 0 !important;
+  }
+  .whisk-h4 {
+	font-size: 16px !important;
+	color: #333 !important;
+	font-weight: normal;
+	margin: 0 0 20px 0 !important;
+  }
+  .mb-25 {
+	margin-bottom: 25px !important;
+  }
+}
+
+.components-modal__frame {
+  overflow: visible;
+}
+
+.wsk-button {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  text-align: center !important;
+  text-transform: none !important;
+  justify-content: center;
+  color: #fff !important;
+  padding: 0 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  opacity: 1;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  white-space: nowrap;
+  background-color: #3dc795;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  &:hover {
+	opacity: 0.8;
+	color: #fff !important;
+	background-color: #3dc795 !important;
+  }
+
+  &:focus {
+	outline: none;
+	color: #fff !important;
+	background-color: #3dc795 !important;
+  }
+}
+
+.whisk-post-select input:focus {
+  box-shadow: none !important;
+}
+
+.edit-post-visual-editor .whisk-recipe-image__preview {
+  background: #f8f6fc;
+  border: 2px dashed var(--wp-admin-theme-color);
+  padding: 40px 10px;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &:focus, &:hover {
+	outline: none;
+  }
+}
+
+.edit-post-visual-editor .whisk-recipe-image__toggle {
+  display: block;
+  height: auto;
+  padding: 0;
+}
+
+.whisk-recipe-image__wrapper {
+  position: relative;
+
+  .whisk-recipe-image__remove {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: opacity .1s linear;
+
+	&:before {
+	  border-radius: 50%;
+	  background-color: #191e23;
+	  color: #fff;
+	}
+  }
+}
+
+.whisk-repeater-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+
+  .whisk-repeater__buttons {
+	display: flex;
+	background: #f8f6fc;
+	width: 100%;
+	flex-direction: row;
+		button {
+		  background-color: #3dc795;
+		  color: white;
+		  width: 30px;
+		  height: 30px;
+		  line-height: 30px;
+		}
+  }
+
+  .whisk-repeater__editor {
+	width: 100%;
+	background-color: #f8f6fc;
+  }
+
+  .mce-edit-focus {
+	outline: none;
+  }
+
+  .freeform-toolbar {
+	width: auto;
+	margin: 0;
+	position: sticky;
+	z-index: z-index( '.freeform-toolbar' );
+	top: 0;
+  }
+
+  .freeform-toolbar:empty {
+	height: 0;
+  }
+
+  // Overwrite inline styles.
+  .freeform-toolbar .mce-tinymce-inline,
+  .freeform-toolbar .mce-tinymce-inline > div,
+  .freeform-toolbar div.mce-toolbar-grp,
+  .freeform-toolbar div.mce-toolbar-grp > div,
+  .freeform-toolbar .mce-menubar,
+  .freeform-toolbar .mce-menubar > div {
+	height: auto !important;
+	width: 100% !important;
+  }
+
+  .freeform-toolbar .mce-container-body.mce-abs-layout {
+	overflow: visible;
+  }
+
+  .freeform-toolbar .mce-menubar,
+  .freeform-toolbar div.mce-toolbar-grp {
+	position: static;
+  }
+
+  .freeform-toolbar.has-advanced-toolbar .mce-toolbar-grp .mce-toolbar {
+	display: block;
+  }
+
+  .freeform-toolbar .mce-toolbar-grp .mce-toolbar:not(:first-child) {
+	display: none;
+  }
+
+  .whisk-rich-text__tinymce {
+	overflow: hidden;
+	margin: -4px;
+	padding: 4px;
+
+	p,
+	li {
+	  margin-block-start: 1em;
+	  margin-block-end: 1em;
+	  margin-inline-start: 0;
+	  margin-inline-end: 0;
+	  line-height: 1.5;
+	}
+
+	ul,
+	ol {
+	  padding-left: 2.5em;
+	  margin-left: 0;
+	}
+  }
+}
+
+.wp-block[data-type="whisk/ingredient"], .wp-block[data-type="whisk/note"] {
+  background: #f8f6fc;
+  padding: 0 10px;
+
+  .whisk-instruction-container {
+	.whisk-text-wrap {
+	  height: 44px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+  }
+
+  .whisk-note-container {
+	padding: 5px;
+  }
+
+  .components-base-control .components-base-control__field {
+	margin-bottom: 0;
+  }
+
+  p.whisk-ingredient__wrap {
+	margin-top: 12px;
+  }
+
+  .whisk-ingredient__label {
+	margin-bottom: 8px;
+	display: block;
+  }
+
+  .components-text-control__input {
+	align-items: center;
+	background-color: hsl(0,0%,100%);
+	border-color: hsl(0,0%,80%);
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	cursor: default;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	min-height: 46px;
+	outline: 0 !important;
+	position: relative;
+	transition: all 100ms;
+	box-sizing: border-box;
+	font-size: 16px;
+	padding: 2px 8px;
+  }
+
+  input {
+	padding: 0 10px !important;
+  }
+}
+
+.block-editor-block-parent-selector__button {
+  display: none;
+}
+
+// instructions
+.wp-block[data-type="whisk/instruction"] {
+  .whisk-instruction-container {
+	background: #f8f6fc;
+	padding: 10px;
+  }
+
+  .whisk-image {
+	margin-bottom: 0 !important;
+  }
+}
+
+// tags
+.wp-block[data-type="whisk/tags"] {
+	.whisk-h3 {
+	  margin-bottom: 0 !important;
+	}
+
+  	input {
+	  padding: 0 10px !important;
+	}
+}
+

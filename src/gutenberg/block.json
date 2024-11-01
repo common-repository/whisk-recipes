@@ -1,0 +1,13 @@
+{
+	"name": "whisk/recipe",
+	"title": "Whisk Recipe Block",
+	"category": "common",
+	"icon": "smiley",
+	"textdomain": "whisk-recipes",
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

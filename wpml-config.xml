@@ -1,0 +1,8 @@
+<wpml-config>
+    <custom-fields>
+        <custom-field action="copy">foo</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">bar</custom-type>
+    </custom-types>
+</wpml-config>
